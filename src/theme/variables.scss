@@ -1,5 +1,6 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+@import "fonts";
 
 :root {
   --ion-color-primary: #896Af9;
@@ -38,11 +39,17 @@
   --ion-color-danger-tint: #cb1a27;
 
   --ion-color-dark: #000000;
-  --ion-color-dark-rgb: 0,0,0;
+  --ion-color-dark-rgb: 0, 0, 0;
   --ion-color-dark-contrast: #ffffff;
-  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #000000;
   --ion-color-dark-tint: #1a1a1a;
+
+  /** apply font family all over the app **/
+  --ion-font-family: Nunito-Regular;
+
+  --desktop-header-height: 96px;
+  --mobile-header-height: 72px;
 }
 
 @media (prefers-color-scheme: dark) {
