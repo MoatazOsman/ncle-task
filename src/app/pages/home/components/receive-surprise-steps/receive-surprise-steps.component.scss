@@ -1,0 +1,85 @@
+@import "../surprise-box/surprise-box.component";
+.receive-surprise-steps {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../../../../../assets/images/receive-surprise-steps.png");
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--ion-color-secondary);
+  padding: 90px 40px;
+
+  &__discover {
+    color: var(--ion-color-dark);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Nunito-Regular;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    color: var(--ion-color-dark);
+    font-size: 48px;
+    line-height: 57.6px;
+    text-align: center;
+    font-family: Nunito-Bold;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  &__description {
+    color: var(--ion-color-dark);
+    font-size: 24px;
+    line-height: 36px;
+    font-family: Nunito-Regular;
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  &__grid {
+    width: 100%;
+    margin: 40px 0 20px 0;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__step-icon {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+  }
+
+  &__step-title {
+    font-size: 32px;
+    line-height: 41.6px;
+    text-align: center;
+    font-family: Nunito-Bold;
+    color: var(--ion-color-dark);
+    white-space: pre-wrap;
+    margin-top: 20px;
+  }
+
+  &__step-description {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Nunito-Regular;
+    color: var(--ion-color-dark);
+    margin-top: 20px;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  &__button {
+    @extend .surprise-box__button;
+  }
+}
