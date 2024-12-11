@@ -1,0 +1,24 @@
+.footer {
+  padding: 80px 64px;
+  background-color: white;
+
+  &__line {
+    background-color: var(--ion-color-dark);
+  }
+
+  &__links {
+    gap: 20px;
+  }
+
+  &__link, &__copyrights {
+    font-family: Nunito-Regular;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--ion-color-dark);
+  }
+
+  &__link {
+    text-decoration: underline;
+    text-decoration-color: var(--ion-color-dark);
+  }
+}
