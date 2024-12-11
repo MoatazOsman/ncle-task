@@ -1,4 +1,5 @@
 @import "../surprise-box/surprise-box.component";
+
 .receive-surprise-steps {
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -9,7 +10,15 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--ion-color-secondary);
-  padding: 90px 40px;
+  padding: 90px 64px;
+
+  @include mediaScreen("desktop-sm") {
+    background-image: none;
+  }
+
+  @include mediaScreen("tablet") {
+    padding: 50px 20px;
+  }
 
   &__discover {
     color: var(--ion-color-dark);
@@ -27,7 +36,15 @@
     font-family: Nunito-Bold;
     margin-bottom: 20px;
     white-space: pre-wrap;
-    text-align: center;
+
+    @include mediaScreen("desktop-sm") {
+      white-space: normal;
+    }
+
+    @include mediaScreen("tablet-xs") {
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
   &__description {
@@ -37,6 +54,15 @@
     font-family: Nunito-Regular;
     white-space: pre-wrap;
     text-align: center;
+
+    @include mediaScreen("desktop-sm") {
+      white-space: normal;
+    }
+
+    @include mediaScreen("tablet-xs") {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   &__grid {
@@ -67,6 +93,15 @@
     color: var(--ion-color-dark);
     white-space: pre-wrap;
     margin-top: 20px;
+
+    @include mediaScreen("desktop-sm") {
+      white-space: normal;
+    }
+
+    @include mediaScreen("tablet-xs") {
+      font-size: 24px;
+      line-height: 31.2px;
+    }
   }
 
   &__step-description {
@@ -77,6 +112,14 @@
     margin-top: 20px;
     text-align: center;
     max-width: 80%;
+
+    @include mediaScreen("desktop") {
+      max-width: 100%;
+    }
+
+    @include mediaScreen("desktop-sm") {
+      white-space: normal;
+    }
   }
 
   &__button {

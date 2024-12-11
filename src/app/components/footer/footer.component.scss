@@ -1,6 +1,12 @@
+@import "../../../theme/media";
+
 .footer {
   padding: 80px 64px;
   background-color: white;
+
+  @include mediaScreen("tablet") {
+    padding: 40px 20px;
+  }
 
   &__line {
     background-color: var(--ion-color-dark);
@@ -8,6 +14,10 @@
 
   &__links {
     gap: 20px;
+
+    @include mediaScreen("tablet-xs") {
+      flex-direction: column;
+    }
   }
 
   &__link, &__copyrights {
@@ -20,5 +30,12 @@
   &__link {
     text-decoration: underline;
     text-decoration-color: var(--ion-color-dark);
+  }
+
+  &__copyrights {
+    @include mediaScreen("tablet-xs") {
+      width: 100%;
+      margin-top: 30px;
+    }
   }
 }

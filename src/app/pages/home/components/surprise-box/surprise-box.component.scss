@@ -1,8 +1,13 @@
+@import "../../../../../theme/media";
 .surprise-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 90px 40px;
+  padding: 90px 64px;
+
+  @include mediaScreen("tablet") {
+    padding: 50px 20px;
+  }
 
   &__title {
     font-size: 56px;
@@ -13,6 +18,15 @@
     text-align: center;
     line-height: 67.2px;
     margin-bottom: 20px;
+
+    @include mediaScreen("desktop-sm") {
+      white-space: normal;
+    }
+
+    @include mediaScreen("tablet-xs") {
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
   &__subTitle {
@@ -23,6 +37,15 @@
     white-space: pre-wrap;
     text-align: center;
     margin-bottom: 20px;
+
+    @include mediaScreen("desktop-sm") {
+      white-space: normal;
+    }
+
+    @include mediaScreen("tablet-xs") {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &__button {
@@ -36,10 +59,23 @@
     text-transform: none;
     --box-shadow: var(--button-drop-shadow);
 
+    @include mediaScreen("tablet-xs") {
+      --border-radius: 12px;
+      --padding-top: 10px;
+      --padding-bottom: 10px;
+      --padding-start: 24px;
+      --padding-end: 24px;
+    }
+
     ion-label {
       line-height: 38.4px;
       font-size: 23px;
       font-family: Nunito-Black;
+
+      @include mediaScreen("tablet-xs") {
+        line-height: 28px;
+        font-size: 20px;
+      }
     }
   }
 

@@ -1,6 +1,12 @@
+@import "../../../theme/media";
 ion-toolbar {
   height: var(--desktop-header-height);
   padding: 0 110px;
   --background: var(--ion-color-primary);
   display: flex;
+
+  @include mediaScreen("tablet") {
+    height: var(--mobile-header-height);
+    padding: 0 16px;
+  }
 }
