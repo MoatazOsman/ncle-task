@@ -1,0 +1,48 @@
+.surprise-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 56px;
+    font-family: Nunito-Black;
+    color: white;
+    text-shadow: var(--header-text-shadow);
+    white-space: pre-wrap;
+    text-align: center;
+    line-height: 67.2px;
+    margin-bottom: 20px;
+  }
+
+  &__subTitle {
+    font-size: 24px;
+    font-family: Nunito-Bold;
+    color: white;
+    line-height: 36px;
+    white-space: pre-wrap;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    --background: white;
+    --border-radius: 24px;
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+    --padding-start: 26px;
+    --padding-end: 26px;
+    --color: var(--ion-color-primary-tint);
+    text-transform: none;
+    --box-shadow: var(--button-drop-shadow);
+
+    ion-label {
+      line-height: 38.4px;
+      font-size: 23px;
+      font-family: Nunito-Black;
+    }
+  }
+
+  &__image {
+    margin-top: 60px;
+  }
+}

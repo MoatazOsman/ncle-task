@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {ComponentsModule} from "../../components/components.module";
+import {SurpriseBoxComponent} from "./components/surprise-box/surprise-box.component";
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import {ComponentsModule} from "../../components/components.module";
         HomePageRoutingModule,
         ComponentsModule
     ],
-  declarations: [HomePage]
+  declarations: [HomePage, SurpriseBoxComponent]
 })
 export class HomePageModule {}
