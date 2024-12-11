@@ -1,0 +1,34 @@
+$phone: 320px;
+$phone-xl: 400px;
+$tablet-xs: 576px;
+$tablet: 768px;
+$desktop-sm: 992px;
+$desktop: 1024px;
+$desktop-lg: 1200px;
+$desktop-xl: 1440px;
+
+$breakpoints: (
+  'phone': (max-width: $phone),
+  'phone-xl': (max-width: $phone-xl),
+  'tablet-xs': (max-width: $tablet-xs),
+  'tablet': (max-width: $tablet),
+  'desktop-sm': (max-width: $desktop-sm),
+  'desktop': (max-width: $desktop),
+  'desktop-lg': (max-width: $desktop-lg),
+  'desktop-xl': (max-width: $desktop-xl),
+);
+
+
+@mixin mediaScreen($deviceType) {
+  @if map-has-key($breakpoints, $deviceType) {
+    $query: map-get($breakpoints, $deviceType);
+
+    @media #{inspect($query)} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
