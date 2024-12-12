@@ -7,7 +7,7 @@
   --ion-color-primary-rgb: 171,149,249;
   --ion-color-primary-contrast: #000000;
   --ion-color-primary-contrast-rgb: 0,0,0;
-  --ion-color-primary-shade: #9683db;
+  --ion-color-primary-shade: #B9A9CD;
   --ion-color-primary-tint: #896AF9;
 
   --ion-color-secondary: #FFF9E6;
@@ -43,7 +43,7 @@
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #000000;
-  --ion-color-dark-tint: #1a1a1a;
+  --ion-color-dark-tint: #202124;
 
   /** apply font family all over the app **/
   --ion-font-family: Nunito-Regular;
@@ -51,7 +51,9 @@
   --desktop-header-height: 96px;
   --mobile-header-height: 72px;
   --header-text-shadow: 2px 2px 0px var(--ion-color-primary-tint);
-  --button-drop-shadow: 4px 4px 0px var(--ion-color-primary-tint);
+  --button-drop-shadow: 4px 4px 0px var(--ion-color-primary-tint), -1px -1px 0px var(--ion-color-primary-tint);
+  --card-drop-shadow: 0px 0px 52px #B9A9CD33;
+  --item-focus-drop-shadow: 2px 2px 0px #F1EDFE, -2px -2px 0px #F1EDFE;
 }
 
 @media (prefers-color-scheme: dark) {
