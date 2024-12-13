@@ -1,0 +1,74 @@
+.subscriptionSummary {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ion-color-blue-100);
+  padding: 24px;
+  height: 100%;
+
+  &__title {
+    color: var(--ion-color-dark-tint);
+    font-size: 20px;
+    line-height: 24px;
+    font-family: Nunito-Bold;
+    margin-bottom: 5px;
+  }
+
+  &__subTitle, &__label {
+    color: var(--ion-color-dark-tint);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+
+  &__free {
+    color: var(--ion-color-grey-500);
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__card {
+    border: 0;
+    box-shadow: none;
+    border-radius: 8px;
+    --background: white;
+    padding: 16px 16px 40px 16px;
+    margin: 24px 0 24px 0;
+  }
+
+  &__subscription {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Nunito-Bold;
+    color: var(--ion-color-dark-tint);
+    margin-bottom: 5px;
+  }
+
+  &__total {
+    font-size: 17px;
+    line-height: 25.5px;
+    font-family: Nunito-Bold;
+    color: var(--ion-color-black-500);
+  }
+
+  &__price, &__value {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ion-color-dark-tint);
+    margin-bottom: 5px;
+
+    span {
+      font-family: Nunito-Bold;
+    }
+  }
+
+  &__subscription-name, &__subscription-duration {
+    color: var(--ion-color-grey-400);
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__line {
+    background-color: var(--ion-color-blue-300);
+    margin: 20px 0;
+  }
+}
