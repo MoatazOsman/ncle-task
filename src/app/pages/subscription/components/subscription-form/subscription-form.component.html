@@ -1,0 +1,170 @@
+<div class="subscriptionForm">
+  <ion-label class="subscriptionForm__title">Subscribe</ion-label>
+  <ion-text class="subscriptionForm__subTitle">to our Monthly Surprise Box</ion-text>
+  <hr class="subscriptionForm__line">
+
+  <form [formGroup]="subscriptionForm">
+    <ion-label class="subscriptionForm__contact-information">Contact Information</ion-label>
+
+    <ion-col class="ion-no-padding">
+      <ion-label class="ion-no-margin subscriptionForm__label">Your Name</ion-label>
+      <ion-item lines="none" class="subscriptionForm__input-item">
+        <ion-input color="text"
+                   formControlName="name" name="name"
+                   placeholder="e.g Osama Alshathri"
+                   type="text">
+        </ion-input>
+      </ion-item>
+<!--      <ion-row class="error-container" *ngIf="submitted && name.invalid">-->
+<!--        <ion-label color="danger" *ngIf="name.errors?.['required']">Name is required</ion-label>-->
+<!--      </ion-row>-->
+    </ion-col>
+
+    <ion-col class="ion-no-padding">
+      <ion-label class="ion-no-margin subscriptionForm__label">email</ion-label>
+      <ion-item lines="none" class="subscriptionForm__input-item">
+        <ion-input color="text"
+                   formControlName="email" name="email"
+                   placeholder="Osama@gmail.com"
+                   type="email">
+        </ion-input>
+      </ion-item>
+    </ion-col>
+
+
+    <ion-label class="subscriptionForm__child-information">{{"Child&apos;s Information"}}</ion-label>
+
+    <ion-col class="ion-no-padding">
+      <ion-label class="ion-no-margin subscriptionForm__label">{{"Child&apos;s Full Name"}}</ion-label>
+      <ion-item lines="none" class="subscriptionForm__input-item">
+        <ion-input color="text"
+                   formControlName="childFullName" name="childFullName"
+                   placeholder="e.g Sarah Mohammad"
+                   type="text">
+        </ion-input>
+      </ion-item>
+    </ion-col>
+
+    <ion-col class="ion-no-padding">
+      <ion-label class="ion-no-margin subscriptionForm__label">{{"Child&apos;s Date of Birth"}}</ion-label>
+
+      <ion-row>
+        <ion-col sizeXs="4">
+          <ion-item id="day-date-modal" lines="none" class="subscriptionForm__input-item">
+            <ion-text
+              class="subscriptionForm__date-time-value">{{(birthDateDay.value | date: 'dd') || 'Date'}}</ion-text>
+            <ion-icon name="chevron-down-outline" slot="end" class="subscriptionForm__arrow-down-icon"></ion-icon>
+            <ion-modal trigger="day-date-modal" class="subscriptionForm__date-time-modal">
+              <ng-template>
+                <div class="inner-content subscriptionForm__date-time-wrapper">
+                  <ion-datetime
+                    #birthdateDayDateTime
+                    formControlName="birthDateDay"
+                    presentation="day"
+                    (ionChange)="birthdateDayDateTime.cancel(true);"
+                  ></ion-datetime>
+                </div>
+              </ng-template>
+            </ion-modal>
+          </ion-item>
+        </ion-col>
+
+        <ion-col sizeXs="4">
+          <ion-item id="month-date-modal" lines="none" class="subscriptionForm__input-item">
+            <ion-text
+              class="subscriptionForm__date-time-value">{{(birthDateMonth.value | date: 'MMMM') || 'Month'}}</ion-text>
+            <ion-icon name="chevron-down-outline" slot="end" class="subscriptionForm__arrow-down-icon"></ion-icon>
+            <ion-modal trigger="month-date-modal" class="subscriptionForm__date-time-modal">
+              <ng-template>
+                <div class="inner-content subscriptionForm__date-time-wrapper">
+                  <ion-datetime
+                    #birthdateMonthDateTime
+                    formControlName="birthDateMonth"
+                    presentation="month"
+                    (ionChange)="birthdateMonthDateTime.cancel(true);"
+                  ></ion-datetime>
+                </div>
+              </ng-template>
+            </ion-modal>
+          </ion-item>
+        </ion-col>
+
+        <ion-col sizeXs="4">
+          <ion-item id="year-date-modal" lines="none" class="subscriptionForm__input-item">
+            <ion-text
+              class="subscriptionForm__date-time-value">{{(birthDateYear.value | date: 'YYYY') || 'Year'}}</ion-text>
+            <ion-icon name="chevron-down-outline" slot="end" class="subscriptionForm__arrow-down-icon"></ion-icon>
+            <ion-modal trigger="year-date-modal" class="subscriptionForm__date-time-modal">
+              <ng-template>
+                <div class="inner-content subscriptionForm__date-time-wrapper">
+                  <ion-datetime
+                    #birthdateYearDateTime
+                    formControlName="birthDateYear"
+                    presentation="year"
+                    (ionChange)="birthdateYearDateTime.cancel(true);"
+                  ></ion-datetime>
+                </div>
+              </ng-template>
+            </ion-modal>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+    </ion-col>
+
+    <ion-col class="ion-no-padding">
+      <ion-label class="ion-no-margin subscriptionForm__label">Grade</ion-label>
+
+      <ion-item lines="none" class="subscriptionForm__input-item">
+        <ion-icon name="chevron-down-outline" slot="end" class="subscriptionForm__arrow-down-icon"></ion-icon>
+        <ion-select class="subscriptionForm__grade" placeholder="e.g Grade 2"
+                    interface="action-sheet"
+                    formControlName="grade">
+          <ion-select-option *ngFor="let grade of grades;" [value]="grade.value">
+            {{ grade?.label }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+
+    <ion-col class="ion-no-padding">
+      <ion-label class="ion-no-margin subscriptionForm__label">Gender</ion-label>
+
+      <ion-row>
+        <ion-col sizeXs="6">
+          <ion-item lines="none" class="subscriptionForm__input-item"
+                    (click)="onSelectGender(genderEnum.BOY)"
+                    [ngClass]="{'selected': gender.value === genderEnum.BOY}">
+            <ion-text
+              class="subscriptionForm__gender">Boy
+            </ion-text>
+            <ion-icon name="checkmark-circle-outline" slot="end" class="subscriptionForm__gender-checkmark"></ion-icon>
+          </ion-item>
+        </ion-col>
+
+        <ion-col sizeXs="6">
+          <ion-item lines="none" class="subscriptionForm__input-item"
+                    (click)="onSelectGender(genderEnum.GIRL)"
+                    [ngClass]="{'selected': gender.value === genderEnum.GIRL}">
+            <ion-text
+              class="subscriptionForm__gender">Girl
+            </ion-text>
+            <ion-icon name="checkmark-circle-outline" slot="end" class="subscriptionForm__gender-checkmark"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+
+    <ion-label class="subscriptionForm__parent-title">As a parent select any 3 topics</ion-label>
+    <ion-row>
+      <ion-chip *ngFor="let topic of topics" class="subscriptionForm__chip" (click)="onToggleTopic(topic.value)"
+                [ngClass]="{'selected': selectedTopics.value.includes(topic.value)}">{{topic.label}}</ion-chip>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center subscriptionForm__button-container">
+      <ion-button class="subscriptionForm__button" (click)="submitForm()">
+        <ion-label>Continue to payment</ion-label>
+      </ion-button>
+    </ion-row>
+  </form>
+</div>

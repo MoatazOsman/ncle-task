@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-surprise-box',
   templateUrl: './surprise-box.component.html',
   styleUrls: ['./surprise-box.component.scss'],
 })
-export class SurpriseBoxComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+export class SurpriseBoxComponent {
 
 }

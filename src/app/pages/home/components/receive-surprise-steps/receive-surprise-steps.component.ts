@@ -5,10 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './receive-surprise-steps.component.html',
   styleUrls: ['./receive-surprise-steps.component.scss'],
 })
-export class ReceiveSurpriseStepsComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
+export class ReceiveSurpriseStepsComponent {
 
 }
