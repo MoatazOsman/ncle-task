@@ -3,12 +3,12 @@ import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/form
 
 const EMAIL_REGEX = '^[A-Za-z0-9\\._%+-]*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$';
 
-enum GENDER {
+export enum GENDER {
   BOY,
   GIRL
 }
 
-enum GRADE {
+export enum GRADE {
   GRADE1,
   GRADE2,
   GRADE3,
@@ -17,7 +17,7 @@ enum GRADE {
   GRADE6,
 }
 
-enum TOPIC {
+export enum TOPIC {
   ARABIC,
   ISLAMIC,
   ENGLISH,
