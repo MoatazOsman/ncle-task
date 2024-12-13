@@ -2,6 +2,14 @@
 
 An Ionic/Angular app with capacitor project for NCLE org
 
+##Preview
+
+- Web ![](web.gif)
+  
+
+
+- Mobile ![](mobile.gif)
+
 ## Prerequisites
 
 - Node >v18.19.x
