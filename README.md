@@ -3,12 +3,13 @@
 An Ionic/Angular app with capacitor project for NCLE org
 
 ##Preview
+- [Click to see it Online](https://ncle-task.netlify.app)
 
-- Web ![](web.gif)
-  
+![](web.gif)
 
+- Mobile
 
-- Mobile ![](mobile.gif)
+![](mobile.gif)
 
 ## Prerequisites
 
