@@ -2,7 +2,7 @@
 
 An Ionic/Angular app with capacitor project for NCLE org
 
-##Preview
+## Preview
 - [Click to see it Online](https://ncle-task.netlify.app)
 
 ![](web.gif)
@@ -11,7 +11,7 @@ An Ionic/Angular app with capacitor project for NCLE org
 
 ![](mobile.gif)
 
-##Tests Overview
+## Tests Overview
 
 ![](code-coverage.png)
 
@@ -45,6 +45,9 @@ Here are some of the NPM scripts defined in the root package.json:
 - `npm run build` - Build the app.
 - `npm run test` - Run tests for all components.
 - `npm run lint` - Lint all components and pages of the app.
+- `npm run code:coverage` - Generate Code Coverage report.
+
+## Structure | What's inside?
 
 ```plaintext
 ncle-task/
@@ -57,6 +60,7 @@ ncle-task/
 ┃ ┃ ┗ images/               # App Images
 ┃ ┣ environments/           # Include dev and prod environements variables
 ┃ ┣ theme/                  # Include Theme files
+┃ ┃ ┣ media.scss            # include devices break points and media query mixin
 ```
 
 ## Tools for better performance
@@ -69,3 +73,8 @@ ncle-task/
 - if you faced an issue while build the android app like "The project is using an incompatible version (AGP 8.2.1) of
   the Android Gradle plugin. Latest supported version is AGP 8.1.2"
   try to update Android Studio to the latest version
+  
+## References
+
+- [How to write effective git commits](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages)
+- [Ionic Framework](https://ionicframework.com)
