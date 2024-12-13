@@ -46,7 +46,7 @@
       <ion-label class="ion-no-margin subscriptionForm__label">{{"Child&apos;s Date of Birth"}}</ion-label>
 
       <ion-row>
-        <ion-col sizeXs="12" sizeSm="12" sizeMd="4">
+        <ion-col sizeXs="4">
           <ion-item id="day-date-modal" lines="none" class="subscriptionForm__input-item">
             <ion-text
               class="subscriptionForm__date-time-value">{{(birthDateDay.value | date: 'dd') || 'Date'}}</ion-text>
@@ -66,7 +66,7 @@
           </ion-item>
         </ion-col>
 
-        <ion-col sizeXs="12" sizeSm="12" sizeMd="4">
+        <ion-col sizeXs="4">
           <ion-item id="month-date-modal" lines="none" class="subscriptionForm__input-item">
             <ion-text
               class="subscriptionForm__date-time-value">{{(birthDateMonth.value | date: 'MMMM') || 'Month'}}</ion-text>
@@ -86,7 +86,7 @@
           </ion-item>
         </ion-col>
 
-        <ion-col sizeXs="12" sizeSm="12" sizeMd="4">
+        <ion-col sizeXs="4">
           <ion-item id="year-date-modal" lines="none" class="subscriptionForm__input-item">
             <ion-text
               class="subscriptionForm__date-time-value">{{(birthDateYear.value | date: 'YYYY') || 'Year'}}</ion-text>
@@ -128,7 +128,7 @@
       <ion-label class="ion-no-margin subscriptionForm__label">Gender</ion-label>
 
       <ion-row>
-        <ion-col sizeXs="12" sizeSm="12" sizeMd="6">
+        <ion-col sizeXs="6">
           <ion-item lines="none" class="subscriptionForm__input-item"
                     (click)="onSelectGender(genderEnum.BOY)"
                     [ngClass]="{'selected': gender.value === genderEnum.BOY}">
@@ -139,7 +139,7 @@
           </ion-item>
         </ion-col>
 
-        <ion-col sizeXs="12" sizeSm="12" sizeMd="6">
+        <ion-col sizeXs="6">
           <ion-item lines="none" class="subscriptionForm__input-item"
                     (click)="onSelectGender(genderEnum.GIRL)"
                     [ngClass]="{'selected': gender.value === genderEnum.GIRL}">
@@ -158,7 +158,7 @@
                 [ngClass]="{'selected': selectedTopics.value.includes(topic.value)}">{{topic.label}}</ion-chip>
     </ion-row>
 
-    <ion-row class="ion-justify-content-center">
+    <ion-row class="ion-justify-content-center subscriptionForm__button-container">
       <ion-button class="subscriptionForm__button">
         <ion-label>Continue to payment</ion-label>
       </ion-button>

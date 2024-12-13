@@ -1,3 +1,4 @@
+@import "../subscription-form/subscription-form.component";
 .subscriptionSummary {
   display: flex;
   flex-direction: column;
@@ -70,5 +71,17 @@
   &__line {
     background-color: var(--ion-color-blue-300);
     margin: 20px 0;
+  }
+
+  &__button-container {
+    display: none;
+    @include mediaScreen("tablet") {
+      display: flex;
+    }
+  }
+
+  &__button {
+    @extend .subscriptionForm__button;
+    margin-top: 25px;
   }
 }
