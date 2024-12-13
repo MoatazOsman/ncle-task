@@ -77,10 +77,10 @@
       }
     }
 
-    &.invalid {
-      color: var(--ion-color-danger);
-      border-color: var(--ion-color-danger);
-    }
+    //&.ion-invalid.ion-touched {
+    //  color: var(--ion-color-danger);
+    //  border-color: var(--ion-color-danger);
+    //}
 
     &.selected {
       --background: var(--ion-color-primary);
@@ -139,11 +139,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    //background: rgba(255, 255, 255, 0.001);
-    //-webkit-backdrop-filter: blur(100px);
-    //backdrop-filter: blur(100px);
-    //border-top-right-radius: 16px;
-    //border-top-left-radius: 16px;
   }
 
   &__date-time-value, &__gender {

@@ -15,6 +15,9 @@
                    type="text">
         </ion-input>
       </ion-item>
+<!--      <ion-row class="error-container" *ngIf="submitted && name.invalid">-->
+<!--        <ion-label color="danger" *ngIf="name.errors?.['required']">Name is required</ion-label>-->
+<!--      </ion-row>-->
     </ion-col>
 
     <ion-col class="ion-no-padding">
@@ -35,7 +38,7 @@
       <ion-label class="ion-no-margin subscriptionForm__label">{{"Child&apos;s Full Name"}}</ion-label>
       <ion-item lines="none" class="subscriptionForm__input-item">
         <ion-input color="text"
-                   formControlName="name" name="name"
+                   formControlName="childFullName" name="childFullName"
                    placeholder="e.g Sarah Mohammad"
                    type="text">
         </ion-input>
@@ -159,7 +162,7 @@
     </ion-row>
 
     <ion-row class="ion-justify-content-center subscriptionForm__button-container">
-      <ion-button class="subscriptionForm__button">
+      <ion-button class="subscriptionForm__button" (click)="submitForm()">
         <ion-label>Continue to payment</ion-label>
       </ion-button>
     </ion-row>

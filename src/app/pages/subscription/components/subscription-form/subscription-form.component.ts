@@ -39,11 +39,13 @@ export class SubscriptionFormComponent {
   public genderEnum = GENDER;
   public grades: GradeType[];
   public topics: TopicsType[];
+  public submitted: boolean;
 
   constructor(private formBuilder: FormBuilder) {
     this.subscriptionForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX),]],
+      childFullName: ['', [Validators.required]],
       birthDateDay: ['', [Validators.required,]],
       birthDateMonth: ['', [Validators.required,]],
       birthDateYear: ['', [Validators.required,]],
@@ -101,6 +103,7 @@ export class SubscriptionFormComponent {
         label: 'Sports'
       },
     ];
+    this.submitted = false;
   }
 
   onSelectGender = (selectedGender: GENDER) => {
@@ -108,13 +111,22 @@ export class SubscriptionFormComponent {
   }
 
   onToggleTopic = (topic: TOPIC) => {
-    if(this.selectedTopics.value.includes(topic)) {
+    if (this.selectedTopics.value.includes(topic)) {
       this.selectedTopics.setValue([...this.selectedTopics.value.filter((selectedTopic: TOPIC) => selectedTopic !== topic)]);
     } else {
       this.selectedTopics.setValue([...this.selectedTopics.value, topic]);
 
     }
   }
+
+  submitForm = () => {
+    this.submitted = true;
+  }
+
+
+  get name(): AbstractControl {
+    return this.subscriptionForm.get('name')!;
+  };
 
   get birthDateDay(): AbstractControl {
     return this.subscriptionForm.get('birthDateDay')!;
