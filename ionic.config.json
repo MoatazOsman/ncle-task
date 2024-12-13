@@ -1,5 +1,7 @@
 {
   "name": "ncleTask",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
