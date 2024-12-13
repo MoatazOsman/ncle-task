@@ -11,6 +11,12 @@ An Ionic/Angular app with capacitor project for NCLE org
 
 ![](mobile.gif)
 
+##Tests Overview
+
+![](code-coverage.png)
+
+![](test-cases.png)
+
 ## Prerequisites
 
 - Node >v18.19.x
